@@ -74,3 +74,11 @@
     (interactive)
     (kill-buffer)
     (jump-to-register :magit-fullscreen)))
+
+(use-package evil-magit
+  :straight t
+  :commands (magit-status)
+  :after magit
+  :config
+  (require 'evil-magit))
+
