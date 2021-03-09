@@ -30,11 +30,9 @@
 (straight-use-package 'use-package)
 (straight-use-package 'better-defaults)
 
-(straight-use-package 'evil)
-(straight-use-package 'evil-collection)
-(straight-use-package 'general)
 
 (use-package evil
+  :straight t
   :init
   (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
@@ -54,6 +52,7 @@
    "fe" '(lambda () (interactive) (find-file (expand-file-name "init.el" user-emacs-directory)))))
 
 (use-package evil-collection
+  :straight t
   :after evil
   :config
   (evil-collection-init))
