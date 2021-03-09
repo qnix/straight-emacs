@@ -67,7 +67,7 @@
     "Make magit-status run alone in a frame."
     (window-configuration-to-register :magit-fullscreen)
     ad-do-it
-    (delete-other-window))
+    (delete-other-windows))
 
   (defun magit-quit-session ()
     "Restore the previous window configuration and kill the magit buffer."
